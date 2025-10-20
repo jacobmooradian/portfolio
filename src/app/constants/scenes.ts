@@ -1,0 +1,1 @@
+export const SCENE_SF_SUNSET_CLEAR = '/scenes/sf/sf-sunset-clear.svg';

@@ -1,4 +1,3 @@
-// app/components/LenisProvider.tsx
 'use client';
 
 import { useEffect } from 'react';
@@ -12,14 +11,12 @@ export default function LenisProvider() {
 
     const lenis = new Lenis({
       autoRaf: true,
-      // 🔑 Leave page scroll native:
       smoothWheel: false,
       syncTouch: false,
 
-      // Only affects programmatic/anchor scrolling:
       duration: 0.7,
-      easing: (t: number) => t, // near-linear
-      anchors: { offset: 80 },  // sticky header height
+      easing: (t: number) => t,
+      anchors: { offset: 80 },
     });
 
     return () => {
