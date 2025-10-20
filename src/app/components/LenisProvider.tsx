@@ -14,7 +14,7 @@ export default function LenisProvider() {
       smoothWheel: false,
       syncTouch: false,
 
-      duration: 0.7,
+      duration: .8,
       easing: (t: number) => t,
       anchors: { offset: 80 },
     });
