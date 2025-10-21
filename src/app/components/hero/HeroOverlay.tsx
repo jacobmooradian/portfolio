@@ -1,24 +1,44 @@
+"use client";
+
+import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
+
+const SceneCanvas = dynamic(() => import("../SceneCanvas"), { ssr: false });
+
 export default function HeroOverlay() {
-    return (
-      <div className="mt-6 glass-on-white max-w-2xl p-6 sm:p-8">
-        <p className="text-xs font-medium text-neutral-600 mb-2">
-          Time-/weather-reactive hero (Sunset + Clear — demo)
-        </p>
-        <h1 className="text-3xl sm:text-4xl font-semibold leading-tight tracking-[-0.02em]">
-          Jacob Mooradian
-        </h1>
-        <p className="mt-3 text-base sm:text-lg text-neutral-700">
-          I build thoughtful, performant products. Designer-leaning software engineer with a love for flat vectors and vibrant palettes.
-        </p>
-        <div className="mt-5 flex flex-wrap items-center gap-3">
-          <a href="#work" className="btn-primary">View case studies</a>
-          <a href="/resume.pdf" className="btn-ghost">Resume</a>
-          <div className="flex items-center gap-2 text-xs text-neutral-600">
-            <span className="tag">Next.js</span>
-            <span className="tag">Tailwind</span>
-            <span className="tag">Figma</span>
+  const pathname = usePathname(); // remount canvas on each route
+
+  return (
+    <section className="relative">
+      {/* BACKGROUND 3D on the right, behind text */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden md:block overflow-visible">
+        {/* Only positioning here */}
+        <div className="md:translate-x-[18%] md:-translate-y-[15%]">
+          {/* Only sizing here (stable box across routes) */}
+          <div className="relative md:w-[min(55vw,900px)] md:h-[70vh] lg:h-[78vh]">
+            <SceneCanvas key={`canvas-${pathname}`} />
           </div>
         </div>
       </div>
-    );
-  }
+
+      {/* FOREGROUND TEXT */}
+      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-24">
+        <div className="max-w-[58ch] md:max-w-[62ch] lg:max-w-[56ch] md:pr-16">
+          <h1 className="text-6xl font-semibold tracking-[-0.02em] text-balance">
+            Jacob Mooradian
+          </h1>
+          <p className="mt-5 text-xl text-neutral-700 text-pretty">
+            With a background in full-stack engineering, I design human-centered
+            interfaces that bring clarity to complexity. My work focuses on turning
+            high-volume weather and geospatial data into visually compelling,
+            intuitive experiences that empower decision-making.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a href="#projects" className="btn-primary">View projects</a>
+            <a href="/resume.pdf" className="btn-ghost">Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

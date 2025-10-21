@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -7,11 +7,15 @@ export default function Navbar() {
         <Link href="/" className="font-semibold tracking-tight">
           jacobmooradian<span className="text-neutral-400">/</span>portfolio
         </Link>
+
         <nav className="hidden sm:flex gap-6 text-sm">
-          <a href="#work" className="hover:underline underline-offset-4">Work</a>
-          <a href="#about" className="hover:underline underline-offset-4">About</a>
-          <a href="#toolkit" className="hover:underline underline-offset-4">Toolkit</a>
-          <a href="#contact" className="hover:underline underline-offset-4">Contact</a>
+          {/* Home (route) */}
+          <Link href="/" className="hover:underline underline-offset-4">Home</Link>
+          {/* Keep in-page anchor for Projects on the homepage */}
+          <a href="#projects" className="hover:underline underline-offset-4">Projects</a>
+          {/* Standalone pages */}
+          <Link href="/about" className="hover:underline underline-offset-4">About</Link>
+          <Link href="/contact" className="hover:underline underline-offset-4">Contact</Link>
         </nav>
       </div>
     </header>
