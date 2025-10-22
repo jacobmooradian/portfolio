@@ -86,7 +86,7 @@ export default function SceneCanvas() {
   return (
     <Canvas
       // Fixed DPR = consistent look across routes; no adaptive loops
-      dpr={[1, 1.25]}
+      dpr={[1, 2]}
       gl={{
         antialias: false,
         alpha: true,
