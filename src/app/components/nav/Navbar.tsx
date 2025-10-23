@@ -12,8 +12,7 @@ export default function Navbar() {
           {/* Home (route) */}
           <Link href="/" className="hover:underline underline-offset-4">Home</Link>
           {/* Keep in-page anchor for Projects on the homepage */}
-          <a href="#projects" className="hover:underline underline-offset-4">Projects</a>
-          {/* Standalone pages */}
+          <Link href="/projects" className="hover:underline underline-offset-4">Projects</Link>
           <Link href="/about" className="hover:underline underline-offset-4">About</Link>
           <Link href="/contact" className="hover:underline underline-offset-4">Contact</Link>
         </nav>

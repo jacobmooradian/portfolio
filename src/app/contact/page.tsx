@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ContactForm from "@/app/components/contact/ContactForm";
-import Navbar from "@/app/components/nav/Navbar";
 
 export const metadata: Metadata = {
   title: "Contact | Jacob Mooradian",
@@ -10,7 +9,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Navbar />
       <main className="mx-auto max-w-3xl px-6 py-16">
         <h1 className="text-4xl font-semibold tracking-tight">Contact</h1>
         <p className="mt-4 text-neutral-700">

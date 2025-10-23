@@ -1,10 +1,11 @@
-import Navbar from './components/nav/Navbar';
-import Hero from './components/hero/Hero';
+import Link from "next/link";
+import Image from "next/image";
+
+import Hero from "./components/hero/Hero";
 
 export default function Home() {
   return (
     <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
-      <Navbar />
 
       <main>
         <Hero />
@@ -17,52 +18,99 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Fire Weather Dashboard */}
             <article className="glass p-5 hover:translate-y-[-2px] transition">
-              <div className="aspect-[4/3] w-full rounded-md bg-neutral-100 grid place-items-center">
-                <span className="text-xs text-neutral-500">Case study cover (placeholder)</span>
-              </div>
-              <h3 className="mt-4 font-medium">Climformatics — Weather-driven dashboards</h3>
+              <Link href="/projects/fire-weather-dashboard" className="block group">
+                {/* VIDEO COVER */}
+                <div className="aspect-video w-full overflow-hidden rounded-md relative bg-black">
+                  <video
+                    className="absolute inset-0 h-full w-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    poster="/images/fire-dashboard-poster.jpg"
+                    preload="metadata"
+                  >
+                    <source src="/videos/fire-dashboard.webm" type="video/webm" />
+                    <source src="/videos/fire-dashboard.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  <span className="absolute bottom-2 left-2 text-[11px] px-2 py-1 rounded bg-black/50 text-white">
+                    20s preview
+                  </span>
+                </div>
+
+                <h3 className="mt-4 font-medium group-hover:underline underline-offset-4">
+                  Fire Weather Dashboard
+                </h3>
+              </Link>
+
               <p className="text-sm text-neutral-600 mt-1">
-                Map tiles, KPIs, and time-series with a design system you can scale.
+                Rebuilt and redesigned a real-time dashboard for exploring fire-weather data.
               </p>
-              <a href="#" className="link mt-3 inline-block">Open case study →</a>
+              <Link href="/projects/fire-weather-dashboard" className="link mt-3 inline-block">
+                Open case study →
+              </Link>
             </article>
 
+            {/* BestDay2Marry */}
             <article className="glass p-5 hover:translate-y-[-2px] transition">
-              <div className="aspect-[4/3] w-full rounded-md bg-neutral-100 grid place-items-center">
-                <span className="text-xs text-neutral-500">Case study cover (placeholder)</span>
-              </div>
-              <h3 className="mt-4 font-medium">SMART EHR — Research UX</h3>
+              <Link href="/projects/bestday2marry" className="block group">
+                <div className="aspect-video w-full overflow-hidden rounded-md bg-neutral-100 relative">
+                  <Image
+                    src="/images/bd2m_logo12.png"
+                    alt="BestDay2Marry Logo"
+                    fill
+                    sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+                    className="object-cover"
+                    priority={false}
+                  />
+                </div>
+
+                <h3 className="mt-4 font-medium group-hover:underline underline-offset-4">
+                  BestDay2Marry
+                </h3>
+              </Link>
+
               <p className="text-sm text-neutral-600 mt-1">
-                Turning complex analyses into clear visuals and accessible flows.
+                Created a platform delivering year-ahead weather insights for weddings and events.
               </p>
-              <a href="#" className="link mt-3 inline-block">Open case study →</a>
+              <Link href="/projects/bestday2marry" className="link mt-3 inline-block">
+                Open case study →
+              </Link>
             </article>
 
+            {/* Climformatics — Company Website */}
             <article className="glass p-5 hover:translate-y-[-2px] transition">
-              <div className="aspect-[4/3] w-full rounded-md bg-neutral-100 grid place-items-center">
-                <span className="text-xs text-neutral-500">Case study cover (placeholder)</span>
-              </div>
-              <h3 className="mt-4 font-medium">Design Systems — Tokens & Glass</h3>
+              <Link href="/projects/climformatics-website" className="block group">
+                <div className="aspect-video w-full overflow-hidden rounded-md bg-white relative p-6">
+                  <Image
+                    src="/images/climformatics_inc_logo.jpeg"
+                    alt="Climformatics — company logo"
+                    fill
+                    className="object-contain"
+                    sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+                    priority={false}
+                  />
+                </div>
+
+                <h3 className="mt-4 font-medium group-hover:underline underline-offset-4">
+                  Climformatics — Company Website
+                </h3>
+              </Link>
+
               <p className="text-sm text-neutral-600 mt-1">
-                A compact token set, glass surfaces, and motion primitives.
+                Redesigned and optimized the company site for a modern, cohesive brand.
               </p>
-              <a href="#" className="link mt-3 inline-block">Open case study →</a>
+              <Link href="/projects/climformatics-website" className="link mt-3 inline-block">
+                Open case study →
+              </Link>
             </article>
           </div>
         </section>
       </main>
-
-      <footer className="border-t border-black/5">
-        <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-neutral-500 flex items-center justify-between">
-          <span>© {new Date().getFullYear()} Jacob Mooradian</span>
-          <div className="flex gap-4">
-            <a className="hover:underline underline-offset-4" href="#" target="_blank">LinkedIn</a>
-            <a className="hover:underline underline-offset-4" href="#" target="_blank">GitHub</a>
-            <a className="hover:underline underline-offset-4" href="#" target="_blank">Figma</a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
