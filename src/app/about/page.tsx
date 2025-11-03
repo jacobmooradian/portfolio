@@ -18,11 +18,11 @@ export default function AboutPage() {
                 </h1>
 
                 <p className="mt-6 text-lg text-neutral-700 leading-relaxed">
-                    Hey, I’m Jacob — I design and build weather intelligence tools.
-                    I work in climate tech, where I turn high-resolution forecasts into
-                    dashboards, APIs, and decision surfaces that real people actually
-                    use. I care a lot about making complex systems feel easy to
-                    understand and act on.
+                    Hey, I’m Jacob! I build and design weather intelligence tools at a climate tech
+                    startup called Climformatics. I turn high resolution forecasts and weather indices
+                    into digestable formats through dashboards, APIs and tools that real people use. I
+                    care a lot about transforming complex data into easy to read information that
+                    benefits everyone.
                 </p>
 
                 {/* Headshot / Hero image placeholder */}
@@ -49,33 +49,30 @@ export default function AboutPage() {
                 <h2 className="text-xl font-medium text-neutral-900">What I work on</h2>
 
                 <p className="text-neutral-700 leading-relaxed">
-                    I’m a software engineer who focuses on building what needs to get done —
-                    from the infrastructure up to the interface. I own the design process as part
-                    of the full product cycle, shaping not just how things work, but how they feel to use.
-                    My work often spans backend services, data pipelines, and front-end experiences,
-                    but no matter what layer I’m working in, I’m always thinking about the end user.
+                    I’m a software engineer, where my main focus lies on building things from 0 to 1.
+                    My work spans across the entire tech stack, from infrastructure to interface. In my
+                    current position, I own the entire design process as a part of our product cycle. I
+                    get to shape how things work and feel. Even though my work spans across backend services,
+                    data pipelines, or wiring up the front-end experience, I always think about the end user.
                 </p>
 
                 <p className="text-neutral-700 leading-relaxed">
-                    Some days that means writing clean, well-documented backend code so our systems stay
-                    reliable and readable for whoever picks it up next. Other days it’s designing a new
-                    interface, thinking through interaction flows, or refining copy so information feels
-                    intuitive. I value clarity — in code, in visuals, and in how teams understand what
-                    we’re building and why.
+                    Some days that means I am writing clean documentation or designing a new interface,
+                    but the mentality remains the same; Whatever I am creating will always be in mind for
+                    the person using it. Clarity and usability will always come first.
                 </p>
 
                 <p className="text-neutral-700 leading-relaxed">
-                    I spend a lot of time considering the audience for whatever I’m building —
-                    whether it’s an internal dashboard for our engineers or a tool for a client
-                    making real-world decisions. I prototype quickly, test early, and iterate
-                    based on meaningful feedback. Every project is an opportunity to make
-                    something that feels more obvious, more usable, and more aligned with
-                    how people actually think.
+                    Ultimately, I end up spending a lot of time considering my audience. If it's internal,
+                    I am thinking about how engineers will navigate my code. For my clients, I am
+                    considering what gaps users may fall into or if the application feels nice to use.
+                    I translate these thoughts into prototyping, testing and iterating quickly through
+                    meaningful feedback. Every project I work on is an opportunity to build up these skills
+                    and align myself with how humans interact with technology.
                 </p>
 
                 <p className="text-neutral-700 leading-relaxed">
-                    Here are a few examples of what that process looks like in practice —
-                    the kinds of problems I design, build, and iterate on day-to-day:
+                    Here are a few examples of what that process actually looks like in practice:
                 </p>
 
                 <ul className="list-disc pl-6 text-neutral-700 leading-relaxed space-y-2">
@@ -99,7 +96,7 @@ export default function AboutPage() {
                 </ul>
 
                 <p className="text-neutral-700 leading-relaxed">
-                    The part I like most is shaping how information shows up — deciding what matters,
+                    The part I like most is shaping how information shows up: deciding what matters,
                     what can wait, and what needs to feel urgent.
                 </p>
 
@@ -120,64 +117,6 @@ export default function AboutPage() {
                         The production dashboard users interact with to view forecast insights for their chosen venue and date.
                     </p>
                 </div>
-            </section>
-
-            {/* --- DESIGN PHILOSOPHY / HCI ANGLE --- */}
-            <section className="mt-16 space-y-6">
-                <h2 className="text-xl font-medium text-neutral-900">
-                    How I approach design
-                </h2>
-
-                <p className="text-neutral-700 leading-relaxed">
-                    Most of what I build is used to make real decisions — planning operations,
-                    preparing for risk, or responding to forecasted conditions before they
-                    actually happen. That means the interface isn’t just “nice to have.”
-                    It directly affects how people act.
-                </p>
-
-                <p className="text-neutral-700 leading-relaxed">
-                    Because of that, I try to design and build in a way that supports decision-making,
-                    not just data viewing:
-                </p>
-
-                <ul className="list-disc pl-6 text-neutral-700 leading-relaxed space-y-2">
-                    <li>
-                        <span className="font-medium text-neutral-900">
-                            Reduce the cognitive load.
-                        </span>{" "}
-                        My first job is to make it obvious what matters right now. I spend a lot of
-                        time on hierarchy, copy, and visual rhythm so users can scan a dashboard
-                        and immediately understand risk, timing, and priority — without having to
-                        interpret a wall of numbers.
-                    </li>
-
-                    <li>
-                        <span className="font-medium text-neutral-900">
-                            Close the loop with the people using it.
-                        </span>{" "}
-                        I get feedback early and often from the people who rely on these tools,
-                        and I iterate until it feels natural for them. The goal is that clients
-                        and internal teams can navigate dashboards, services, and alerts without
-                        needing a walkthrough — they should understand what the system can do,
-                        and how to act on it.
-                    </li>
-
-                    <li>
-                        <span className="font-medium text-neutral-900">
-                            Be honest about what the system is saying.
-                        </span>{" "}
-                        Forecasts are probabilistic. Alerts can create urgency. I try to present
-                        information with the right level of confidence and intent — clear,
-                        up-to-date, and grounded in actual model output. If we say something is
-                        high risk, it’s traceable to the data and it’s communicated in plain
-                        language.
-                    </li>
-                </ul>
-
-                <p className="text-neutral-700 leading-relaxed">
-                    I like when something looks simple because the complexity was handled on
-                    purpose — not hidden.
-                </p>
             </section>
 
             {/* --- EXPERIENCE TIMELINE --- */}
@@ -272,17 +211,10 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="text-neutral-700 leading-relaxed">
-                    I like long walks, long debug sessions, and aggressively clean UI.
-                    I’m happiest when I’m building something real with people who care.
+                    I love to stay active whether I'm walking or running around SF. I am
+                    currently training to run my first marathon! Other than that, I enjoy
+                    cooking, playing games, or reading about history.
                 </p>
-
-                {/* lifestyle / vibe image placeholder */}
-                <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-center text-neutral-400 text-sm leading-relaxed">
-                    <div className="aspect-[3/1] w-full rounded-lg bg-neutral-200/60" />
-                    <p className="mt-3">
-                        Placeholder for desk setup / city / “this is where I think.”
-                    </p>
-                </div>
             </section>
         </main>
     );
